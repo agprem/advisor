@@ -1,0 +1,63 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head><style>
+    .main
+    {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color:green;
+    position:fixed;
+    float:right;
+    }
+    .main nav
+      {
+        width:450px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+      }
+    .main nav a
+    {
+      text-decoration:none;
+      color:yellow;
+      text-transform:uppercase;
+      float:right;
+
+    }
+    </style>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <div class="main"><nav><a href="/">Home</a>
+  <a href="/user/register/" >Register</a><a href="/user/login/">Login</a>
+  <a href="/admin/advisor/" >Add Advisor</a></nav></div><br><br<br><br><br><br><br>
+  <body>
+    <h2> Login </h2>
+
+    <form class="" method="post">
+      {% csrf_token %}
+      {% for field in login_form %}
+        <p>
+            {{field.label_tag}}
+            {{field}}
+
+            {% if field.help_text %}
+            <email style='color:grey'>{{field.help_text}}
+            {% endif %}
+            {% for error in field.errors  %}
+            <p style='color:red'>{{error}}
+            </p>
+            {% endfor %}
+        </p>
+        {% endfor %}
+
+        <button type="submit" >Login</button>
+    </form>
+
+
+  </body>
+</html>
+{% endblock content %}

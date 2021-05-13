@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <style>
+      .main
+      {
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      background-color:green;
+      position:fixed;
+      float:right;
+      }
+      .main nav
+        {
+          width:450px;
+          display:flex;
+          justify-content:space-between;
+          align-items:center;
+        }
+      .main nav a
+      {
+        text-decoration:none;
+        color:yellow;
+        text-transform:uppercase;
+        float:right;
+
+      }
+      .tableclass
+        {
+          margin-top:50px;
+          width:100%;
+
+        }
+
+
+      </style>
+
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>Welcome to Advisor Booked Page <br></h2><div class='main'><nav><a href="/">Home</a>
+  <a href="/user/userid/advisor/booking/" class="links">Show booked-slots</a><a href="/user/logout/" class="links">Logout</a>
+  <a href="/admin/advisor/" class="links">Add Advisor</a></nav></div>
+    <br><br><br><br><br><center><div class='tableclass'>
+  <table border="1" width="1000px" style="background-color:#ffff99;">
+  <tr><th>Advisor-ID</th>  <th>Advisor Name</th><th> Profile pic</th><th>Booking-ID</th><th>Booking-Time</th></tr>
+  {% for i in advisors %}
+  <tr><td> {{i.id}}</td><td>{{i.first_name}}</td><td><img src="{{i.profilepic.url}}" width="100" height="50"></td>
+    <td>{{i.bid}}</td><td>{{i.bookingtime}}</td></tr>
+  {% endfor %}
+  </table></div></center>
+
+      <br>
+
+  </body>
+</html>
