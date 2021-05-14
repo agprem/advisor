@@ -33,10 +33,13 @@
   </head>
   <div class="main">
     <nav>
-    &nbsp;&nbsp;  <a href="/">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/user/userid/advisor/">Show Advisors</a>&nbsp;&nbsp;&nbsp;
-    <a href="/user/userid/advisor/booking/">Show Booked-Slots</a>&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;
+    <a href="/">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="/user/{{user.id}}/advisor/">Show Advisors</a>&nbsp;&nbsp;&nbsp;
+    <a href="/user/{{user.id}}/advisor/booking/">Show Booked-Slots</a>&nbsp;&nbsp;&nbsp;
       <a href="/admin/advisor/" >Add Advisor</a></nav></div>
-  <body><br><br><br><br>
+  <body>
+    <br><br><br><br>
 
   <marquee><font color="red" size="4">  Congrats!..............</font></marquee><br><br>
   <font color="purple" size="6">  <br>Booking Confirmed with Mr/Ms. {{info.first_name}} on {{info.bookingtime}}<br> with Booking-ID--> {{info.bid}}</font>

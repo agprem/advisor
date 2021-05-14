@@ -26,9 +26,9 @@ urlpatterns = [
     path('user/register/',views.register,name='register'),
     path('user/login/',views.login_view,name='login_view'),
     path('user/logout/',views.logout_view,name='logout'),
-    path('user/userid/advisor/',views.bookadvisor,name='bookadvisor'),
-    path('user/userid/advisor/<int:id>/',views.booking,name='booking'),
-    path('user/userid/advisor/booking/',views.showbooked,name='showbooked'),
+    path('user/<int:id1>/advisor/',views.bookadvisor,name='bookadvisor'),
+    path('user/<int:id1>/advisor/<int:id>/',views.booking,name='booking'),
+    path('user/<int:id1>/advisor/booking/',views.showbooked,name='showbooked'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

@@ -32,15 +32,15 @@
 	<title>Advisor Form</title>
 </head>
 <div class="main"><nav><a href="/">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="/user/register/" >Register</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/user/login/">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="/user/userid/advisor/">Show Advisors</a>&nbsp;&nbsp;
+<a href="/user/register/" >Register</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/user/login/">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="/admin/advisor/" >Add Advisor</a></nav></div>
 <body><br><br><br><br>
 
 	<form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     <center>
-    
+
       <table border="1" width="1000px" style="background-color:#ffff99;">
         {{ form.as_table }}
       </table></center>

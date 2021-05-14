@@ -40,10 +40,15 @@
   <div class="main">
     <nav>
       <a href="/">Home</a>
-      <a href="/user/register/" >Register</a><a href="/user/login/">Login</a>
+      <a href="/user/register/" >Register</a>
+      <a href="/user/login/">Login</a>
       <a href="/admin/advisor/" >Add Advisor</a></nav></div>
   <body><br><br>
-    <br><br><br><font color="black" size="6">Welcome to Home Page {{user.name}} you have registered on our Portal with Email--> {{user.email}}</font><br>
+    <br><br><br>  <font color="black" size="6">
+      {% if user %}
+     {{user.name}}<br> Welcometo our HomePage you have registered on our Portal with email--> {{user.email}}
+      {% else %} Welcome to Home Page</font><br>
+       {% endif %}
 
 
   </body>

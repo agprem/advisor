@@ -33,6 +33,10 @@
           width:100%;
 
         }
+        .right
+        {
+          float:right;
+        }
 
 
       </style>
@@ -40,10 +44,17 @@
     <meta charset="utf-8">
     <title></title>
   </head>
+   <div class="right">  Welcome :<b>{{user.name}}<b><br>email-id {{user.email}}</div>
   <body>
-    <h2>Welcome to Advisor Booked Page <br></h2><div class='main'><nav><a href="/">Home</a>
-  <a href="/user/userid/advisor/booking/" class="links">Show booked-slots</a><a href="/user/logout/" class="links">Logout</a>
-  <a href="/admin/advisor/" class="links">Add Advisor</a></nav></div>
+    <h2>Welcome to Advisor Booked Page <br></h2>
+    <div class='main'>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/user/{{user.id}}/advisor/booking/" class="links">Show booked-slots</a>
+        <a href="/user/logout/" class="links">Logout</a>
+        <a href="/admin/advisor/" class="links">Add Advisor</a>
+      </nav>
+    </div>
     <br><br><br><br><br><center><div class='tableclass'>
   <table border="1" width="1000px" style="background-color:#ffff99;">
   <tr><th>Advisor-ID</th>  <th>Advisor Name</th><th> Profile pic</th><th>Booking-ID</th><th>Booking-Time</th></tr>
