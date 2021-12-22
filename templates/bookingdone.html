@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head><style>
+  .main
+    {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color:green;
+    position:fixed;
+    float:right;
+    }
+  .main nav
+    {
+      width:450px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      }
+   .main nav a
+    {
+    text-decoration:none;
+    color:yellow;
+    text-transform:uppercase;
+    float:left;
+
+    }
+    </style>
+
+    <meta charset="utf-8">
+    <title>Booking Confirmed</title>
+  </head>
+  <div class="main">
+    <nav>
+    &nbsp;&nbsp;  <a href="/">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/user/userid/advisor/">Show Advisors</a>&nbsp;&nbsp;&nbsp;
+    <a href="/user/userid/advisor/booking/">Show Booked-Slots</a>&nbsp;&nbsp;&nbsp;
+      <a href="/advisor/" >Add Advisor</a></nav></div>
+  <body><br><br><br><br>
+
+  <marquee><font color="red" size="4">  Congrats!..............</font></marquee><br><br>
+  <font color="purple" size="6">  <br>Booking Confirmed with Mr/Ms. {{info.first_name}} on {{info.bookingtime}}<br> with Booking-ID--> {{info.bid}}</font>
+
+  </body>
+</html>

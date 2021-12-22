@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .main
+    {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color:green;
+    position:fixed;
+    float:right;
+    }
+    .main nav
+      {
+        width:450px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+      }
+    .main nav a
+    {
+      text-decoration:none;
+      color:yellow;
+      text-transform:uppercase;
+      float:right;
+
+    }
+    </style>
+	<meta charset="UTF-8">
+	<title>Advisor Form</title>
+</head>
+<div class="main"><nav><a href="/">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/user/register/" >Register</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/user/login/">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/user/userid/advisor/">Show Advisors</a>&nbsp;&nbsp;
+<a href="/admin/advisor/" >Add Advisor</a></nav></div>
+<body><br><br><br><br>
+
+	<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <center>
+    
+      <table border="1" width="1000px" style="background-color:#ffff99;">
+        {{ form.as_table }}
+      </table></center>
+      <br><center>
+      <input type="Submit" value="Submit"></center>
+  </form>
+</body>
+</html>
